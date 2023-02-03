@@ -1,0 +1,38 @@
+---
+title: "Data Analysis on Technology Company Layoffs 2022-2023"
+output: pdf_document
+---
+
+------------------------------------------------------------------------
+
+This is a comprehensive data analysis on technology company layoffs during the period of 2022-2023.
+
+```{r data}
+data <- read.csv("tech_layoffs.csv")
+summary(data)
+```
+
+There are 9 attributes in this data.
+
+```{r cols, echo=TRUE}
+cols <- colnames(data)
+print(cols)
+```
+
+After removing rows where the number of total layoffs are unclear, there are a total of 307 rows in the data.
+
+```{r data_removal_stats}
+summary(no_unclear_data)
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
